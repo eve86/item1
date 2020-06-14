@@ -1,0 +1,384 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/*-------------------------------*/
+html {
+	scroll-behavior: smooth;
+}
+
+.chat-container {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	z-index: 100;
+	padding: 20px 40px;
+	background-color: rgb(30, 48, 84);
+	transform: translateY(90px);
+	transition: all .5s;
+}
+
+.chat-show {
+	transform: translateY(0px);
+}
+
+.header {
+	width: 100%;
+	color: rgb(30, 48, 84);
+}
+
+.header-in {
+	height: 80px;
+	padding-left: 80px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.header-in h1{
+	font-size: 2.2rem;
+	line-height: 80px;
+}
+
+.header-right ul{
+	display: flex;
+}
+
+.header-right li{
+	font-size: 1.1rem;
+	line-height: 80px;
+	margin: 0 15px;
+}
+
+.header-right li:nth-child(4) {
+	margin: 0 0 0 15px;
+}
+
+.header-right a {
+	color: rgb(30, 48, 84);
+}
+
+.header-right a:hover{
+	opacity: 0.7;
+}
+
+.chat{
+	color: white;
+	background-color: rgb(30, 48, 84);
+	padding: 0 20px;
+	cursor: default;
+	display: inline-block;
+}
+
+.chat:hover{
+	opacity: 0.8;
+}
+
+.header-main {
+	width: 100%;
+	height: calc(100vh - 80px);
+	background-image: url("https://moon.publicdomainq.net/201902/23o/publicdomainq-0031739zdfwoz.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.header-main-item {
+	color: white;
+	width: 250px;
+	padding: 25px 40px;
+	background-color: rgba(30, 48, 84, 1);
+	position: absolute;
+	top: -15px;
+	left: -15px;
+}
+
+.header-main-item-line {
+	width: 330px;
+	height: 400px;
+	border: solid 4px white;
+	position: absolute;
+	top: 15%;
+	left: 5%;
+	z-index: 1;
+}
+
+.header-main-item h3{
+	font-size: 2.3rem;
+	font-weight: bold;
+	margin: 25px 0;
+}
+
+.header-main-item-val {
+	font-size: 1.3rem;
+	margin: 25px 0;
+}
+
+.header-main-item p{
+	font-size: 1.0rem;
+	line-height: 1.5em;
+	margin: 20px 0;
+}
+
+.header-main-item a {
+	display: inline-block;
+	color: white;
+	font-size: 0.8rem;
+	padding: 12px 25px;
+	margin: 10px 0;
+	border: solid 1px white;
+	transition: all .3s;
+}
+
+.header-main-item a:hover{
+	color: rgb(30, 48, 84);
+	background-color: white;
+}
+
+.main {
+	width: 100%;
+}
+
+.news {
+	text-align: center;
+	margin: 80px 0;
+}
+
+.news h2 {
+	font-size: 2.5rem;
+	margin-bottom: 80px;
+	white-space: nowrap;
+}
+
+.news-content{
+	display: inline-block;
+	padding-bottom: 10px;
+	border-bottom: 1px #e0e0e0 solid;
+	margin-bottom: 20px;
+}
+
+.news span {
+	color: #ffffff;
+	background-color: #9f9f9f;
+	font-size: 0.8rem;
+	padding: 5px 10px;
+	margin: 0 20px;
+}
+
+.news-more {
+	cursor: default;
+	display: inline-block;
+	margin: 40px 0;
+	padding: 10px 35px;
+	color: #3a3a3a;
+	border: 1px #3a3a3a solid;
+	transition: all .5s;
+}
+
+.news-more:hover {
+	color: white;
+	background-color: #303030;
+}
+
+.about {
+	text-align: center;
+	padding: 80px 0;
+	background-color: rgb(248, 248, 248);
+}
+
+.about h2 {
+	color: rgb(19, 30, 53);
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+	white-space: nowrap;
+}
+
+.about-container {
+	display: flex;
+	justify-content: space-around;
+	padding: 0 200px;
+	margin: 0 auto;
+}
+
+.about-item {
+	width: calc(100% / 3 - 5%);
+}
+
+.icon {
+	font-size: 4rem;
+	color: rgb(19, 30, 53);
+	margin-bottom: 20px;
+}
+
+.about-item h3{
+	color: rgb(19, 30, 53);
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.about-item p {
+	color: rgb(19, 30, 53);
+	font-size: 0.9rem;
+}
+
+.cards {
+	text-align: center;
+	margin: 80px 0;
+	color: rgb(19, 30, 53);
+}
+
+.cards h2 {
+	font-size: 2.0rem;
+	margin-bottom: 80px;
+	white-space: nowrap;
+}
+
+.cards-container {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 150px;
+	text-align-last: left;
+}
+
+.card {
+	width: calc(100% / 3 - 1%);
+}
+
+.card img {
+	width: 100%;
+}
+
+.card h3{
+	font-size: 2.0rem;
+	font-weight: bold;
+	margin: 15px 0;
+}
+
+.card h4 {
+	font-size: 1.3rem;
+	margin: 15px 0;
+}
+
+.card p{
+	font-size: 0.9rem;
+	line-height: 1.5em;
+	margin: 20px 0;
+}
+
+.card a {
+	display: inline-block;
+	color: rgb(19, 30, 53);
+	font-size: 0.8rem;
+	padding: 12px 25px;
+	margin: 10px 0;
+	border: solid 1px rgb(30, 48, 84);
+	transition: all .3s;
+}
+
+.card a:hover{
+	color: white;
+	background-color: rgb(30, 48, 84);
+}
+
+.cards-button {
+	cursor: default;
+	display: inline-block;
+	margin: 80px 0;
+	padding: 18px 70px;
+	color: rgb(30, 48, 84);
+	border: 1px rgb(30, 48, 84) solid;
+	background-color: white;
+	transition: all .1s;
+}
+
+.cards-button:hover {
+	color: white;
+	background-color: rgb(30, 48, 84);
+}
+
+.contact {
+	text-align: center;
+	margin: 80px 0;
+	color: rgb(30, 48, 84);
+}
+
+.contact h2 {
+	font-size: 2.0rem;
+	margin-bottom: 80px;
+	white-space: nowrap;
+}
+
+.contact-container {
+	display: flex;
+	justify-content: space-around;
+	padding: 0 200px;
+}
+
+.contact-right input{
+	width: 300px;
+	height: 30px;
+	margin-bottom: 10px;
+	display: block;
+	border: solid 1px rgb(30, 48, 84);
+	outline: none;
+}
+
+.contact-right textarea{
+	width: 300px;
+	height: 160px;
+	margin: 10px 0;
+	display: block;
+	border-color: rgb(30, 48, 84);
+	outline: none;
+}
+
+.footer {
+	width: 100%;
+	height: 80px;
+	background-color: rgb(37, 59, 104);
+}
