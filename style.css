@@ -120,7 +120,7 @@ html {
 .header-main {
 	width: 100%;
 	height: calc(100vh - 80px);
-	background-image: url("https://moon.publicdomainq.net/201902/23o/publicdomainq-0031739zdfwoz.jpg");
+	background-image: url("https://picsum.photos/350/250/?random");
 	background-size: cover;
 	background-position: center;
 	position: relative;
